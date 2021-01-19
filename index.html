@@ -1,0 +1,282 @@
+<style>
+    .container {
+        display: grid;
+        grid-template-areas: 
+        "top-left top-right"
+        "content content"
+        "footer footer";
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .top-left {
+        grid-area: top-left;
+        display: inline-block;
+        background-color: white;
+        justify-self: start;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        color: #000;
+        opacity: 0.75;
+        margin-top: 16px;
+    }
+
+    .top-right {
+        grid-area: top-right;
+        background-color: white;
+        justify-self: end;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        color: #000;
+        opacity: 0.75;
+
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .footer-container {
+        width: 100%;
+        height: 20px;
+        background-color: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        display: grid;
+        grid-template-areas: 
+        "bot-left bot-right";
+        padding: 10px;
+    }
+
+    .bot-left {
+        grid-area: bot-left;
+        background-color: #f2f2f2;
+        justify-self: start;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        color: #5f6368;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .bot-right {
+        grid-area: bot-right;
+        background-color: #f2f2f2;
+        justify-self: end;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        color: #5f6368;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .content {
+        grid-area: content;
+        height: 100%;
+        font-size: small;
+        font-family: arial, sans-serif;
+        margin-top: 140px;
+    }
+
+    .search-box {
+        background: #fff;
+        display: flex;
+        border: 1px solid #dfe1e5;
+        box-shadow: none;
+        border-radius: 24px;
+        width: 582px;
+        height: 44px;
+        margin: 0 auto;
+    }
+
+    .box {
+        flex: 1;
+        display: flex;
+        padding: 5px 8px 0 16px;
+        padding-left: 14px;
+    }
+
+    .glass-box1 {
+        display: flex;
+        align-items: center;
+        padding-right: 13px;
+        margin-top: -5px;
+    }
+
+    .glass-box2 {
+        margin: auto;
+    }
+
+    .glass-icon {
+        color: #9aa0a6;
+        height: 20px;
+        width: 20px;
+        margin-top: 3px;
+        display: inline-block;
+        fill: currentColor;
+        line-height: 24px;
+        position: relative;
+    }
+
+    .text-box {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+    }
+
+    .text-field {
+        color: transparent;
+        flex: 100%;
+        white-space: pre;
+        font: 16px arial,sans-serif;
+        line-height: 34px;
+        height: 34px !important;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: rgba(0, 0, 0, .87);
+        word-wrap: break-word;
+        outline: none;
+        display: flex;
+        flex: 100%;
+        margin-top: -37px;
+        font: 16px arial, sans-serif;
+        line-height: 34px;
+        height: 34px !important;
+    }
+
+    .speech-box1 {
+        display: flex;
+        flex: 0 0 auto;
+        margin-top: -5px;
+        align-items: stretch;
+        flex-direction: row;
+    }
+
+    .speech-box2 {
+        flex: 1 0 auto;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        border: 0;
+        background: transparent;
+        outline: none;
+        padding: 0 8px;
+        width: 24px;
+        line-height: 44px;
+    }
+
+    .speech-icon {
+        background: url('https://web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png') 0 0 no-repeat;
+        height: 24px;
+        width: 24px;
+        background-size: 24px;
+    }
+
+    button {
+        margin: 11px 4px;
+        padding: 0 16px;
+        line-height: 27px;
+        height: 36px;
+        min-width: 54px;
+        background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+        background-color: #f2f2f2;
+        color: #5f6368;
+        font-family: arial, sans-serif;
+        font-size: 14px;
+        padding: 0 16px;
+        border: 1px solid #f2f2f2;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    span {
+        margin: 10px;
+    }
+
+    .sign-in {
+        color: white;
+        cursor: default;
+        text-decoration: none;
+        border: 1px solid #4285f4;
+        font-weight: bold;
+        outline: none;
+        background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+        line-height: 28px;
+        padding: 0 12px;
+        border-radius: 2px;
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+</style>
+<body> 
+    <div class="container">
+        <div class="top-left">
+            <span>About</span>
+            <span>Store</span>
+        </div>
+        <div class="top-right">
+            <span>Gmail</span>
+            <span>Images</span>
+            <span>Menu</span>
+            <span><button class="sign-in">Sign In</button></span>
+        </div>
+        <div class="content">
+            <img src="googlelogo_color_272x92dp.png">
+    <p>
+        <div class="search-box">
+            <div class="box">
+                <div class="glass-box1">
+                    <div class="glass-box2">
+                        <span class="glass-icon">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>   
+                        </span>
+                    </div>
+                </div>
+                <div class="text-box">
+                    <div class="text-field"></div>
+                    <input type="text">
+                </div>
+                <div class="speech-box1">
+                    <div class="speech-box2">
+                        <span class="speech-icon"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </p>
+    <form action="#">
+        <button type="submit">Google Search</button><button type="button">I'm Feeling Lucky</button>
+    </form>
+        </div>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="bot-left">
+                    <span>Advertising</span>
+                    <span>Business</span>
+                    <span>How Search works</span>
+                </div>
+                <div class="bot-right">
+                    <span>Privacy</span>
+                    <span>Terms</span>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
